@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme - lilac */
+    --background: 280 30% 97%;
+    --foreground: 0 0% 0%;
+    --card: 280 30% 97%;
+    --card-foreground: 0 0% 0%;
+    --popover: 280 30% 97%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 280 60% 65%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 280 30% 90%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 280 30% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 280 30% 90%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 0%;
+    --border: 280 30% 85%;
+    --input: 280 30% 85%;
+    --ring: 280 60% 65%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark theme - black with lilac text */
+    --background: 0 0% 0%;
+    --foreground: 280 40% 85%;
+    --card: 0 0% 5%;
+    --card-foreground: 280 40% 85%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 280 40% 85%;
+    --primary: 280 60% 75%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 280 40% 85%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 280 30% 70%;
+    --accent: 0 0% 10%;
+    --accent-foreground: 280 40% 85%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 280 40% 85%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 280 60% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Typewriter effect styles */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid;
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: hsl(var(--primary));
+  }
+}
+
+.typewriter-container {
+  display: inline-block;
+  min-height: 2.5rem;
+}
