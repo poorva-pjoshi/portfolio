@@ -22,13 +22,13 @@ export default function Hero() {
         // After erasing, move to next title
         const nextTitleTimer = setTimeout(() => {
           setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length)
-        }, 2000) // Wait after erasing before showing next title
+        }, 1000) // Wait after erasing before showing next title
 
         return () => clearTimeout(nextTitleTimer)
-      }, 5000) // How long to display the full text
+      }, 4000) // How long to display the full text
 
       return () => clearTimeout(erasingTimer)
-    }, 12000) // Typing duration
+    }, 1500) // Typing duration
 
     return () => clearTimeout(typingTimer)
   }, [currentTitleIndex, titles.length])
@@ -62,9 +62,7 @@ export default function Hero() {
               </div>
             </div>
             <p className="text-muted-foreground max-w-md mt-6 mb-8">
-              A Data Enthusiast with experience delivering insights across healthcare, insurance, and technology
-              sectors. Proficient in building business intelligence dashboards, analyzing large datasets, and optimizing
-              operations.
+              From Data to Insights. From Insights to Action
             </p>
             <Button className="group" size="lg">
               <span>View Resume</span>
